@@ -28,9 +28,12 @@ class CounterDemo extends Component{
     }
 
     decrement= ()=> {
+      if(this.state.counter!=0){
       this.setState({
         counter:this.state.counter-1
       });
+    }
+    else{alert("Negative Value Not allowed")}
     }
 
     render(){
