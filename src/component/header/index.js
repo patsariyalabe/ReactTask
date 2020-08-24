@@ -1,6 +1,6 @@
 
-import Navs from './Navs';
+import Header from './Header';
 
 
 
-export default Navs;
+export default Header;

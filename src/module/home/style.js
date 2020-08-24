@@ -5,6 +5,7 @@ align-items: center;
 justify-content: space-between;
 width: calc(100% - 230px);
 padding: 0 15px;
+margin:30px auto;
 `;
 export const CardCol = styled.div`
 width: calc(25% - 15px);

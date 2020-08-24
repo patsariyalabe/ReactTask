@@ -1,35 +1,47 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-
+import data from './data.json'
 
 class Demo extends React.Component { 
   constructor(props) 
   { 
       super(props); 
-      this.state = { name : "Employee Name!" }; 
+     
   } 
 
 
-  changeState() 
-  { 
-      this.setState({ name : "Lov Patsariya" }); 
-  } 
+
 
   render() 
   { 
       return ( 
-          <div className="box"> 
-           <div class="w-100">
-             <h1>Successive Technology</h1>
-             <h2>{ this.state.name }</h2> 
-             <a onClick={this.changeState.bind(this)}>Click Here To Know The Employee Name</a> 
-           </div>
-         </div>); 
-  }
+        <div>
+        {data.map((postData,index) => {
+          console.log(postData);
+          return (
+            <div key={index}>
+              <img  src={postData.image} />
+              <div>
+                <h2>
+                  {postData.title}
+                </h2>
+                <h6>
+                  {postData.tag + " "}
+                </h6>
+
+                <p>
+                  {postData.body}
+                </p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      )
   
   }
 
-
+}
 
 
 export default Demo;
